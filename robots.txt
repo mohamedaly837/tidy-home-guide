@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tidy-home-guide.vercel.app/sitemap.xml

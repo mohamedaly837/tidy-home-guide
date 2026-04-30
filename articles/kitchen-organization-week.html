@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>كيف تحافظين على المطبخ مرتبًا طوال الأسبوع؟ | دليل البيت المرتب</title>
+  <meta name="description" content="تعرفي على خطوات عملية تساعدك على الحفاظ على المطبخ مرتبًا طوال الأسبوع، من تنظيم الأدوات وتنظيف الأسطح إلى ترتيب الثلاجة وتقليل الفوضى اليومية." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f2ea;
+      --card: #ffffff;
+      --green: #52735f;
+      --green-dark: #2f5140;
+      --green-soft: #e7efe8;
+      --text: #253126;
+      --muted: #6f796e;
+      --line: rgba(47, 81, 64, .14);
+      --shadow: 0 22px 60px rgba(47, 81, 64, .11);
+      --shadow-soft: 0 12px 34px rgba(47, 81, 64, .08);
+      --container: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(214, 229, 207, .55), transparent 34%),
+        radial-gradient(circle at top left, rgba(240, 222, 188, .55), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .hb-page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 22px;
+    }
+
+    .hb-container {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+    }
+
+    .hb-header {
+      position: sticky;
+      top: 14px;
+      z-index: 50;
+      margin-bottom: 24px;
+    }
+
+    .hb-header__inner {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+      background: rgba(255, 250, 241, .86);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.82);
+      box-shadow: 0 12px 35px rgba(47, 81, 64, .08);
+      border-radius: 999px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .hb-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+    }
+
+    .hb-logo__mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dfeadf, #fff8e8);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(47,81,64,.08);
+      font-size: 20px;
+    }
+
+    .hb-logo__text strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .hb-logo__text span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .hb-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .hb-nav a {
+      padding: 9px 12px;
+      color: #556255;
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 999px;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .hb-nav a:hover,
+    .hb-nav a.active {
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .hb-menu-btn {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      display: none;
+      place-items: center;
+      background: #fff;
+      color: var(--green-dark);
+      box-shadow: 0 8px 20px rgba(47, 81, 64, .08);
+      cursor: pointer;
+      font-size: 18px;
+      flex: 0 0 42px;
+    }
+
+    .article-hero {
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 34px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .article-hero__image {
+      height: 460px;
+      border-radius: 28px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      background: #e7e2d9;
+    }
+
+    .article-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .article-hero__content {
+      padding: 8px 18px 24px;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .article-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 24px rgba(47,81,64,.06);
+    }
+
+    h1 {
+      color: var(--green-dark);
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.3;
+      font-weight: 900;
+      letter-spacing: -.9px;
+      margin-bottom: 14px;
+    }
+
+    .article-desc {
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+      max-width: 760px;
+      margin: 0 auto 18px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      flex-wrap: wrap;
+      color: #7a8678;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(82,115,95,.55);
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 28px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    .article-content {
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 30px;
+      padding: clamp(24px, 4vw, 46px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .article-content p {
+      color: #445044;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .article-content h2 {
+      color: var(--green-dark);
+      font-size: clamp(23px, 3vw, 30px);
+      line-height: 1.5;
+      font-weight: 900;
+      margin: 34px 0 12px;
+      padding-top: 4px;
+    }
+
+    .article-content a {
+      color: var(--green-dark);
+      font-weight: 900;
+      border-bottom: 2px solid rgba(82,115,95,.22);
+    }
+
+    .article-content a:hover {
+      border-bottom-color: var(--green-dark);
+    }
+
+    .article-side {
+      position: sticky;
+      top: 110px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .side-card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .side-card h3 {
+      color: var(--green-dark);
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .side-card ul {
+      list-style: none;
+    }
+
+    .side-card li {
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .side-card a:hover {
+      color: var(--green-dark);
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 15px 32px rgba(47,81,64,.22);
+    }
+
+    .hb-footer {
+      margin-top: 54px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(231,239,232,.65), transparent 32%),
+        rgba(255,255,255,.62);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 34px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .hb-footer__top {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.3fr .8fr .8fr 1fr;
+      gap: 28px;
+    }
+
+    .hb-footer h3 {
+      color: var(--green-dark);
+      font-size: 17px;
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+
+    .hb-footer p {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+      max-width: 330px;
+    }
+
+    .hb-footer ul {
+      list-style: none;
+    }
+
+    .hb-footer li {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hb-footer li a:hover {
+      color: var(--green-dark);
+      padding-right: 4px;
+    }
+
+    .hb-footer__bottom {
+      border-top: 1px solid var(--line);
+      padding: 15px 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(255,250,241,.55);
+    }
+
+    .hb-footer__bottom strong {
+      color: var(--green-dark);
+      font-weight: 900;
+    }
+
+    .hb-footer-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--green-dark);
+      font-weight: 900;
+      transition: .2s ease;
+      direction: rtl;
+      unicode-bidi: isolate;
+    }
+
+    .hb-footer-whatsapp:hover {
+      color: #1f3d2f;
+      transform: translateY(-1px);
+    }
+
+    .hb-footer-whatsapp bdi {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-weight: 900;
+    }
+
+    @media (max-width: 950px) {
+      .hb-nav {
+        position: absolute;
+        top: 74px;
+        right: 0;
+        left: 0;
+        width: min(var(--container), calc(100vw - 44px));
+        margin: 0 auto;
+        background: rgba(255,250,241,.96);
+        border: 1px solid rgba(255,255,255,.9);
+        box-shadow: var(--shadow-soft);
+        border-radius: 24px;
+        padding: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hb-nav.is-open {
+        display: flex;
+      }
+
+      .hb-menu-btn {
+        display: grid;
+      }
+
+      .article-layout,
+      .hb-footer__top {
+        grid-template-columns: 1fr;
+      }
+
+      .article-side {
+        position: static;
+      }
+
+      .article-hero__image {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hb-page {
+        padding: 12px;
+      }
+
+      .hb-header {
+        top: 8px;
+      }
+
+      .hb-header__inner {
+        border-radius: 22px;
+      }
+
+      .hb-logo__text strong {
+        font-size: 16px;
+      }
+
+      .hb-logo__text span {
+        display: none;
+      }
+
+      .article-hero {
+        padding: 10px;
+        border-radius: 26px;
+      }
+
+      .article-hero__image {
+        height: 260px;
+        border-radius: 22px;
+      }
+
+      .article-hero__content {
+        padding: 8px 10px 18px;
+      }
+
+      .article-content {
+        border-radius: 24px;
+        padding: 24px 18px;
+      }
+
+      .article-content p {
+        font-size: 16px;
+      }
+
+      .hb-footer__top {
+        padding: 24px;
+      }
+
+      .hb-footer__bottom {
+        padding: 14px 22px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hb-page">
+
+    <header class="hb-header">
+      <div class="hb-header__inner">
+        <a href="../index.html" class="hb-logo" aria-label="دليل البيت المرتب">
+          <span class="hb-logo__mark">🌿</span>
+          <span class="hb-logo__text">
+            <strong>دليل البيت المرتب</strong>
+            <span>أفكار بسيطة لحياة أجمل</span>
+          </span>
+        </a>
+
+        <nav class="hb-nav" id="hbNav">
+          <a href="../index.html">الرئيسية</a>
+          <a href="living-room-organization.html">ترتيب البيت</a>
+          <a href="daily-home-cleaning.html">تنظيف يومي</a>
+          <a class="active" href="#">المطبخ</a>
+          <a href="carpet-care-at-home.html">المفروشات</a>
+          <a href="calm-organized-home.html">أفكار منزلية</a>
+        </nav>
+
+        <button class="hb-menu-btn" id="hbMenuBtn" aria-label="القائمة">☰</button>
+      </div>
+    </header>
+
+    <section class="hb-container article-hero">
+      <div class="article-hero__image">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzi8rlDmjWdokJTM8EeqdwQg97TiFowrzBsM1byVmL04VvKuZOehsSBKUj8I6J5sJNqcbe3o7RaEHR0kATP6kX4tR2aUjipQ4P1sPMO5OdALV97kRKnwD5lTrz1Pw8KRwSbSENdNZdqnIVtXwWXeoUloNzkuPFbLdSQq-mpLZVUFw0-z8TmfZcFkVah6PE/s5000/03-kitchen-article.jpg" alt="مطبخ مرتب ونظيف">
+      </div>
+
+      <div class="article-hero__content">
+        <span class="article-kicker">🍳 المطبخ</span>
+        <h1>كيف تحافظين على المطبخ مرتبًا طوال الأسبوع؟</h1>
+        <p class="article-desc">
+          خطوات عملية تساعدك على تقليل الفوضى اليومية داخل المطبخ، وتنظيم الأدوات والأسطح والثلاجة بطريقة سهلة.
+        </p>
+
+        <div class="article-meta">
+          <span>دليل البيت المرتب</span>
+          <span class="dot"></span>
+          <span>12 مايو 2026</span>
+          <span class="dot"></span>
+          <span>حوالي 7 دقائق قراءة</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hb-container article-layout">
+
+      <article class="article-content">
+
+        <p>
+          المطبخ من أكثر الأماكن استخدامًا داخل البيت، ولذلك هو أكثر مكان يمكن أن تظهر فيه الفوضى بسرعة. بين تحضير الطعام، غسل الأطباق، ترتيب المشتريات، واستخدام الأدوات اليومية، قد يتحول المطبخ في وقت قصير إلى مساحة مزدحمة وصعبة الاستخدام. لكن الحفاظ على المطبخ مرتبًا طوال الأسبوع لا يحتاج إلى مجهود كبير، بل يحتاج إلى نظام بسيط يتكرر يوميًا.
+        </p>
+
+        <p>
+          الفكرة ليست أن يكون المطبخ مثاليًا طوال الوقت، بل أن يكون سهل الحركة، واضح الترتيب، وكل شيء فيه له مكان محدد. عندما تعرفين مكان الأدوات، وتقللين التراكم على الأسطح، يصبح الطبخ والتنظيف أسرع وأخف. في هذا المقال، ستجدين خطوات عملية تساعدك على الحفاظ على المطبخ مرتبًا طوال الأسبوع بدون ضغط.
+        </p>
+
+        <h2>1. ابدئي بتقليل الأشياء الموجودة على الأسطح</h2>
+
+        <p>
+          أول ما يجعل المطبخ يبدو غير مرتب هو كثرة الأشياء على الرخام أو الطاولة. حتى لو كان المطبخ نظيفًا، وجود أكواب، علب، توابل، أدوات طبخ، وأجهزة صغيرة في كل مكان يعطي إحساسًا بالفوضى. لذلك، حاولي إبقاء الأسطح خالية قدر الإمكان.
+        </p>
+
+        <p>
+          اتركي فقط الأشياء التي تستخدمينها يوميًا، مثل غلاية الماء أو آلة القهوة، أما باقي الأدوات فمن الأفضل وضعها داخل الأدراج أو الخزائن. كلما كانت الأسطح أهدأ، بدا المطبخ أوسع وأنظف.
+        </p>
+
+        <h2>2. خصصي مكانًا ثابتًا لكل أداة</h2>
+
+        <p>
+          من أهم أسرار المطبخ المرتب أن يكون لكل شيء مكان معروف. الأكواب في رف محدد، الصحون في خزانة واحدة، أدوات الطبخ في درج قريب من البوتاجاز، والتوابل في مكان سهل الوصول. هذا التنظيم يوفر وقتًا كبيرًا أثناء الطبخ، ويمنع تراكم الأدوات في أماكن عشوائية.
+        </p>
+
+        <p>
+          إذا كنتِ تجدين نفسك تبحثين كثيرًا عن أداة معينة، فهذه علامة أن مكانها غير مناسب. أعيدي ترتيب الأدوات حسب الاستخدام، وليس حسب الشكل فقط. الأدوات اليومية يجب أن تكون الأقرب، أما الأدوات التي تستخدمينها قليلًا فيمكن وضعها في أماكن أبعد.
+        </p>
+
+        <h2>3. اغسلي الأطباق أولًا بأول</h2>
+
+        <p>
+          تراكم الأطباق في الحوض يجعل المطبخ يبدو مزدحمًا حتى لو كان باقي المكان مرتبًا. لذلك، من الأفضل غسل الأطباق بعد كل وجبة أو على الأقل ترتيبها وعدم تركها لفترات طويلة. إذا لم يكن لديك وقت للغسل فورًا، اشطفي الأطباق بسرعة ورتبيها داخل الحوض بدل تركها بشكل عشوائي.
+        </p>
+
+        <p>
+          هذه العادة الصغيرة تمنع الروائح، وتقلل الإحساس بالضغط عند دخول المطبخ. خمس دقائق بعد كل وجبة أفضل بكثير من ساعة تنظيف في نهاية اليوم.
+        </p>
+
+        <h2>4. نظفي الرخام والبوتاجاز بعد الاستخدام</h2>
+
+        <p>
+          بقع الزيت، بقايا الطعام، وآثار الطبخ تصبح أصعب في التنظيف كلما تُركت فترة أطول. لذلك، امسحي الرخام والبوتاجاز بعد الانتهاء من الطبخ مباشرة. لا تحتاجين إلى تنظيف عميق كل مرة، فقط فوطة مبللة ومنظف خفيف يكفيان للحفاظ على شكل المطبخ.
+        </p>
+
+        <p>
+          هذه الخطوة تجعل المطبخ جاهزًا للاستخدام في أي وقت، وتمنع تراكم الدهون على الأسطح. ومع الوقت ستلاحظين أن التنظيف الأسبوعي أصبح أسهل وأسرع.
+        </p>
+
+        <h2>5. رتبي الثلاجة مرة كل أسبوع</h2>
+
+        <p>
+          الثلاجة جزء مهم من ترتيب المطبخ. عندما تكون ممتلئة بأشياء غير مرتبة أو أطعمة منسية، يصبح تحضير الوجبات أصعب. خصصي وقتًا بسيطًا مرة أسبوعيًا لمراجعة محتويات الثلاجة، إزالة الأشياء القديمة، وتنظيم الخضار، الفاكهة، العلب، وبقايا الطعام.
+        </p>
+
+        <p>
+          يمكنك استخدام علب شفافة أو سلال صغيرة داخل الثلاجة لتقسيم الأطعمة. مثلًا: سلة للخضار، سلة للصلصات، وعلبة لبقايا الطعام. هذا يجعل كل شيء واضحًا، ويقلل الهدر.
+        </p>
+
+        <h2>6. اجعلي أدوات التنظيف قريبة وسهلة الوصول</h2>
+
+        <p>
+          إذا كانت أدوات التنظيف بعيدة أو غير منظمة، ستتأجل مهمة التنظيف كل مرة. ضعي فوطة نظيفة، إسفنجة، بخاخ تنظيف، وأكياس قمامة في مكان قريب من الحوض أو أسفل المطبخ. عندما تكون الأدوات جاهزة، يصبح تنظيف أي بقعة سريعًا ولا يحتاج إلى تفكير.
+        </p>
+
+        <p>
+          يمكنك أيضًا تخصيص علبة صغيرة لأدوات التنظيف اليومية حتى لا تختلط بباقي الأغراض. هذه التفاصيل البسيطة تجعل ترتيب المطبخ عادة سهلة وليست مهمة ثقيلة.
+        </p>
+
+        <h2>7. خصصي 10 دقائق في نهاية اليوم</h2>
+
+        <p>
+          أفضل طريقة للحفاظ على المطبخ مرتبًا طوال الأسبوع هي تخصيص عشر دقائق فقط في نهاية كل يوم. خلال هذه الدقائق، اغسلي الأكواب المتبقية، امسحي الرخام، رتبي الأدوات، أخرجي القمامة إذا لزم الأمر، وتأكدي أن الحوض والأسطح نظيفة.
+        </p>
+
+        <p>
+          عندما تستيقظين في الصباح وتجدين المطبخ مرتبًا، يبدأ اليوم بشكل أهدأ وأسهل. هذه العادة تشبه إعادة ضبط بسيطة للمكان كل ليلة. ويمكنك ربطها بروتين البيت العام من خلال مقال <a href="daily-home-cleaning.html">خطوات بسيطة للحفاظ على نظافة البيت يوميًا</a>.
+        </p>
+
+        <h2>8. لا تكدسي المشتريات بدون ترتيب</h2>
+
+        <p>
+          بعد التسوق، لا تضعي الأكياس في المطبخ وتتركيها كما هي. رتبي المشتريات مباشرة: الأشياء الجافة في مكانها، الخضار في الثلاجة، المنظفات في خزانتها، والأكياس الفارغة في مكان محدد. هذه الخطوة تمنع بداية الفوضى من أول لحظة.
+        </p>
+
+        <p>
+          من الأفضل أيضًا مراجعة الموجود قبل شراء الجديد. أحيانًا يمتلئ المطبخ بمنتجات مكررة فقط لأننا لا نعرف ما الموجود بالفعل داخل الخزائن.
+        </p>
+
+        <h2>9. استخدمي علبًا واضحة للتخزين</h2>
+
+        <p>
+          العلب الشفافة تساعدك على رؤية المحتويات بسرعة، خصوصًا في تخزين الحبوب، المكرونة، السكر، الدقيق، والبقوليات. كما أنها تجعل الخزانة تبدو أهدأ وأكثر تنظيمًا من الأكياس المفتوحة والعلب المختلفة.
+        </p>
+
+        <p>
+          ليس ضروريًا شراء علب كثيرة مرة واحدة. ابدئي بالأشياء الأكثر استخدامًا، ثم أضيفي المزيد تدريجيًا حسب احتياجك. المهم أن يكون التخزين عمليًا ومناسبًا لطريقة استخدامك اليومية.
+        </p>
+
+        <h2>10. حافظي على بساطة الديكور</h2>
+
+        <p>
+          الديكور في المطبخ جميل، لكن زيادته قد يسبب زحمة بصرية ويصعب التنظيف. اختاري لمسات بسيطة مثل نبتة صغيرة، طبق خشبي، أو علبة أنيقة للتوابل. لا تضعي قطعًا كثيرة على الأسطح، خصوصًا إذا كان المطبخ صغيرًا.
+        </p>
+
+        <p>
+          البساطة تجعل المطبخ يبدو مرتبًا حتى في الأيام المزدحمة، وتساعدك على تنظيفه بسرعة. نفس الفكرة تنطبق على باقي البيت، ويمكنك قراءة مقال <a href="living-room-organization.html">7 خطوات لترتيب غرفة المعيشة بسهولة</a> للحصول على أفكار مشابهة لغرفة المعيشة.
+        </p>
+
+        <h2>خلاصة</h2>
+
+        <p>
+          الحفاظ على المطبخ مرتبًا طوال الأسبوع لا يعتمد على التنظيف العميق المستمر، بل على عادات صغيرة تتكرر يوميًا. تقليل الأشياء على الأسطح، غسل الأطباق أولًا بأول، مسح الرخام بعد الاستخدام، وترتيب الثلاجة والخزائن كلها خطوات بسيطة لكنها تصنع فرقًا واضحًا.
+        </p>
+
+        <p>
+          ابدئي بعادة واحدة فقط هذا الأسبوع، مثل تنظيف الرخام كل ليلة أو ترتيب الحوض بعد كل وجبة. ومع الوقت، ستجدين أن المطبخ أصبح أسهل في الاستخدام، وأقل فوضى، وأكثر راحة لكل أفراد البيت.
+        </p>
+
+      </article>
+
+      <aside class="article-side">
+        <div class="side-card">
+          <h3>مقالات مرتبطة</h3>
+          <ul>
+            <li><a href="living-room-organization.html">7 خطوات لترتيب غرفة المعيشة بسهولة</a></li>
+            <li><a href="daily-home-cleaning.html">خطوات بسيطة للحفاظ على نظافة البيت يوميًا</a></li>
+            <li><a href="carpet-care-at-home.html">أفضل طريقة للعناية بالسجاد داخل المنزل</a></li>
+            <li><a href="calm-organized-home.html">كيف تجعلين البيت أكثر هدوءًا وتنظيمًا؟</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>العودة للرئيسية</h3>
+          <p>يمكنك الرجوع إلى الصفحة الرئيسية لتصفح باقي الأقسام والمقالات.</p>
+          <br>
+          <a class="back-home" href="../index.html">الصفحة الرئيسية ←</a>
+        </div>
+      </aside>
+
+    </section>
+
+    <footer class="hb-container hb-footer">
+      <div class="hb-footer__top">
+
+        <div>
+          <h3>عن المدونة</h3>
+          <p>
+            دليل البيت المرتب مدونة عربية تقدم أفكارًا بسيطة ونصائح عملية
+            لتنظيم البيت وتحسين جودة الحياة اليومية للأسرة.
+          </p>
+        </div>
+
+        <div>
+          <h3>أقسام سريعة</h3>
+          <ul>
+            <li><a href="living-room-organization.html">ترتيب البيت</a></li>
+            <li><a href="daily-home-cleaning.html">تنظيف يومي</a></li>
+            <li><a href="kitchen-organization-week.html">المطبخ</a></li>
+            <li><a href="carpet-care-at-home.html">المفروشات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>روابط مهمة</h3>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="living-room-organization.html">أحدث المقالات</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>أفكار من المدونة</h3>
+          <ul>
+            <li><a href="calm-organized-home.html">بيت أكثر هدوءًا وتنظيمًا</a></li>
+            <li><a href="carpet-care-at-home.html">العناية بالسجاد داخل المنزل</a></li>
+            <li><a href="kitchen-organization-week.html">تنظيم المطبخ طوال الأسبوع</a></li>
+            <li><a href="daily-home-cleaning.html">روتين نظافة يومي بسيط</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="hb-footer__bottom">
+        <span>© 2026 دليل البيت المرتب. جميع الحقوق محفوظة.</span>
+        <span><strong>تصميم Mohamedali</strong></span>
+        <a class="hb-footer-whatsapp"
+           href="https://wa.me/79960827854"
+           target="_blank"
+           rel="noopener"
+           aria-label="تواصل عبر واتساب">
+          <strong>واتساب:</strong>
+          <bdi>+7 996 082-78-54</bdi>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const hbMenuBtn = document.getElementById("hbMenuBtn");
+    const hbNav = document.getElementById("hbNav");
+
+    hbMenuBtn.addEventListener("click", function () {
+      hbNav.classList.toggle("is-open");
+    });
+  </script>
+
+</body>
+</html>

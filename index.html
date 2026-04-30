@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>دليل البيت المرتب | أفكار بسيطة لبيت أهدأ وأرتب</title>
+  <meta name="description" content="دليل البيت المرتب مدونة عربية تقدم نصائح عملية عن ترتيب البيت، العناية بالمطبخ والحمام، تنظيف المفروشات، وتنظيم الحياة المنزلية اليومية." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f2ea;
+      --bg-soft: #fbf8f2;
+      --card: #ffffff;
+      --green: #52735f;
+      --green-dark: #2f5140;
+      --green-soft: #e7efe8;
+      --cream: #fffaf1;
+      --text: #253126;
+      --muted: #6f796e;
+      --line: rgba(47, 81, 64, .14);
+      --shadow: 0 22px 60px rgba(47, 81, 64, .11);
+      --shadow-soft: 0 12px 34px rgba(47, 81, 64, .08);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(214, 229, 207, .55), transparent 34%),
+        radial-gradient(circle at top left, rgba(240, 222, 188, .55), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .hb-page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 22px;
+    }
+
+    .hb-container {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .hb-header {
+      position: sticky;
+      top: 14px;
+      z-index: 50;
+      margin-bottom: 24px;
+    }
+
+    .hb-header__inner {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+      background: rgba(255, 250, 241, .82);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.8);
+      box-shadow: 0 12px 35px rgba(47, 81, 64, .08);
+      border-radius: 999px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .hb-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+    }
+
+    .hb-logo__mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dfeadf, #fff8e8);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(47,81,64,.08);
+      font-size: 20px;
+    }
+
+    .hb-logo__text strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -.4px;
+    }
+
+    .hb-logo__text span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .hb-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .hb-nav a {
+      padding: 9px 12px;
+      color: #556255;
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 999px;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .hb-nav a:hover,
+    .hb-nav a.active {
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .hb-search,
+    .hb-menu-btn {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: var(--green-dark);
+      box-shadow: 0 8px 20px rgba(47, 81, 64, .08);
+      cursor: pointer;
+      font-size: 18px;
+      flex: 0 0 42px;
+    }
+
+    .hb-menu-btn {
+      display: none;
+    }
+
+    /* Hero */
+    .hb-hero {
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hb-hero__grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      min-height: 560px;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .hb-hero__image {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 520px;
+      background: #ddd;
+    }
+
+    .hb-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hb-hero__image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(37,49,38,.28));
+      pointer-events: none;
+    }
+
+    .hb-hero__badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,.84);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+    }
+
+    .hb-hero__badge span {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .hb-hero__badge strong {
+      display: block;
+      font-size: 13px;
+      color: var(--green-dark);
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .hb-hero__badge small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .hb-hero__content {
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(231, 239, 232, .85), transparent 36%),
+        linear-gradient(135deg, #fffaf1 0%, #f7f1e5 100%);
+      padding: clamp(32px, 5vw, 62px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hb-hero__content::before {
+      content: "⌁";
+      position: absolute;
+      top: 32px;
+      left: 34px;
+      color: rgba(82,115,95,.24);
+      font-size: 86px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hb-kicker {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 24px rgba(47,81,64,.06);
+    }
+
+    .hb-title {
+      color: var(--green-dark);
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.16;
+      font-weight: 900;
+      letter-spacing: -1.6px;
+      margin-bottom: 18px;
+    }
+
+    .hb-title span {
+      color: #1f2e24;
+    }
+
+    .hb-lead {
+      color: #5b665b;
+      font-size: 18px;
+      font-weight: 600;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .hb-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hb-btn {
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 13px 21px;
+      font-family: inherit;
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      transition: .25s ease;
+    }
+
+    .hb-btn--primary {
+      background: var(--green-dark);
+      color: #fff;
+      box-shadow: 0 15px 32px rgba(47,81,64,.25);
+    }
+
+    .hb-btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 38px rgba(47,81,64,.30);
+    }
+
+    .hb-btn--ghost {
+      background: #fff;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+    }
+
+    /* Sections */
+    .hb-section {
+      padding: 58px 0 0;
+    }
+
+    .hb-section__head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .hb-section__title {
+      color: var(--green-dark);
+      font-size: clamp(25px, 3vw, 34px);
+      font-weight: 900;
+      letter-spacing: -.7px;
+    }
+
+    .hb-section__title small {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .hb-view-all {
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 900;
+      background: rgba(255,255,255,.68);
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      border-radius: 999px;
+    }
+
+    /* Categories */
+    .hb-cats {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .hb-cat {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 24px;
+      padding: 22px 14px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: .25s ease;
+    }
+
+    .hb-cat:hover {
+      transform: translateY(-4px);
+      background: #fff;
+    }
+
+    .hb-cat__icon {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 12px;
+      border-radius: 20px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+    }
+
+    .hb-cat strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    /* Articles */
+    .hb-articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .hb-articles--two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hb-card {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.92);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      transition: .25s ease;
+      display: block;
+    }
+
+    .hb-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(47,81,64,.13);
+    }
+
+    .hb-card__image {
+      position: relative;
+      height: 245px;
+      overflow: hidden;
+      border-radius: 24px;
+      margin: 12px;
+      margin-bottom: 0;
+      background: #e7e2d9;
+    }
+
+    .hb-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .35s ease;
+    }
+
+    .hb-card:hover .hb-card__image img {
+      transform: scale(1.045);
+    }
+
+    .hb-card__num {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      color: var(--green-dark);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+
+    .hb-card__body {
+      padding: 20px 22px 18px;
+    }
+
+    .hb-card__body h3 {
+      color: var(--green-dark);
+      font-size: 21px;
+      line-height: 1.45;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .hb-card__body p {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hb-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      color: #7a8678;
+      font-size: 12px;
+      font-weight: 800;
+      border-top: 1px solid var(--line);
+      padding-top: 13px;
+    }
+
+    .hb-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(82,115,95,.55);
+    }
+
+    /* Quick ideas */
+    .hb-ideas {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .hb-idea {
+      background: linear-gradient(135deg, rgba(255,255,255,.8), rgba(231,239,232,.65));
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+      min-height: 152px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .hb-idea__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .hb-idea__icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 17px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      color: var(--green-dark);
+    }
+
+    .hb-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .hb-idea p {
+      color: var(--green-dark);
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* Newsletter */
+    .hb-newsletter {
+      background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(231,239,232,.72));
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 34px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 260px 1fr 180px;
+      gap: 24px;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hb-newsletter__image {
+      height: 220px;
+      border-radius: 26px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .hb-newsletter__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hb-newsletter h2 {
+      color: var(--green-dark);
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.35;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .hb-newsletter p {
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 20px;
+      max-width: 620px;
+    }
+
+    .hb-form {
+      display: flex;
+      gap: 10px;
+      max-width: 560px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px;
+      box-shadow: 0 10px 28px rgba(47,81,64,.06);
+    }
+
+    .hb-form input {
+      flex: 1;
+      border: 0;
+      outline: none;
+      background: transparent;
+      padding: 0 16px;
+      font-family: inherit;
+      font-weight: 700;
+      color: var(--text);
+      min-width: 0;
+    }
+
+    .hb-form button {
+      border: 0;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-family: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .hb-envelope {
+      width: 150px;
+      height: 150px;
+      border-radius: 40px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      font-size: 68px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--line);
+      justify-self: center;
+    }
+
+    /* Features */
+    .hb-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .hb-feature {
+      display: flex;
+      gap: 12px;
+      background: rgba(255,255,255,.56);
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 8px 25px rgba(47,81,64,.05);
+    }
+
+    .hb-feature__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      background: var(--green-soft);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      flex: 0 0 44px;
+      font-size: 20px;
+    }
+
+    .hb-feature strong {
+      display: block;
+      color: var(--green-dark);
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 1.3;
+      margin-bottom: 5px;
+    }
+
+    .hb-feature span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    .hb-footer {
+      margin-top: 54px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(231,239,232,.65), transparent 32%),
+        rgba(255,255,255,.62);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 34px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .hb-footer__top {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.3fr .8fr .8fr 1fr;
+      gap: 28px;
+    }
+
+    .hb-footer h3 {
+      color: var(--green-dark);
+      font-size: 17px;
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+
+    .hb-footer p {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+      max-width: 330px;
+    }
+
+    .hb-footer ul {
+      list-style: none;
+    }
+
+    .hb-footer li {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hb-footer li a {
+      transition: .2s ease;
+    }
+
+    .hb-footer li a:hover {
+      color: var(--green-dark);
+      padding-right: 4px;
+    }
+
+    .hb-footer__bottom {
+      border-top: 1px solid var(--line);
+      padding: 15px 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(255,250,241,.55);
+    }
+
+    .hb-footer__bottom strong {
+      color: var(--green-dark);
+      font-weight: 900;
+    }
+
+    .hb-footer-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--green-dark);
+      font-weight: 900;
+      transition: .2s ease;
+      direction: rtl;
+      unicode-bidi: isolate;
+    }
+
+    .hb-footer-whatsapp:hover {
+      color: #1f3d2f;
+      transform: translateY(-1px);
+    }
+
+    .hb-footer-whatsapp bdi {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-weight: 900;
+    }
+
+    /* Responsive */
+    @media (max-width: 1050px) {
+      .hb-nav {
+        position: absolute;
+        top: 74px;
+        right: 0;
+        left: 0;
+        width: min(var(--container), calc(100vw - 44px));
+        margin: 0 auto;
+        background: rgba(255,250,241,.96);
+        border: 1px solid rgba(255,255,255,.9);
+        box-shadow: var(--shadow-soft);
+        border-radius: 24px;
+        padding: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hb-nav.is-open {
+        display: flex;
+      }
+
+      .hb-menu-btn {
+        display: grid;
+      }
+
+      .hb-search {
+        display: none;
+      }
+
+      .hb-hero__grid,
+      .hb-newsletter,
+      .hb-footer__top {
+        grid-template-columns: 1fr;
+      }
+
+      .hb-hero__image {
+        min-height: 390px;
+        order: 2;
+      }
+
+      .hb-hero__content {
+        order: 1;
+      }
+
+      .hb-cats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hb-articles,
+      .hb-articles--two {
+        grid-template-columns: 1fr;
+      }
+
+      .hb-card__image {
+        height: 310px;
+      }
+
+      .hb-ideas,
+      .hb-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hb-envelope {
+        display: none;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hb-page {
+        padding: 12px;
+      }
+
+      .hb-header {
+        top: 8px;
+      }
+
+      .hb-header__inner {
+        border-radius: 22px;
+      }
+
+      .hb-logo__text strong {
+        font-size: 16px;
+      }
+
+      .hb-logo__text span {
+        display: none;
+      }
+
+      .hb-hero {
+        padding: 10px;
+        border-radius: 26px;
+      }
+
+      .hb-hero__content {
+        padding: 30px 22px;
+        border-radius: 22px;
+      }
+
+      .hb-title {
+        font-size: 35px;
+      }
+
+      .hb-lead {
+        font-size: 15px;
+      }
+
+      .hb-hero__image {
+        min-height: 310px;
+        border-radius: 22px;
+      }
+
+      .hb-cats,
+      .hb-ideas,
+      .hb-features {
+        grid-template-columns: 1fr;
+      }
+
+      .hb-section__head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hb-card__image {
+        height: 230px;
+      }
+
+      .hb-newsletter {
+        padding: 12px;
+        border-radius: 26px;
+      }
+
+      .hb-newsletter__image {
+        height: 190px;
+        border-radius: 22px;
+      }
+
+      .hb-form {
+        border-radius: 22px;
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .hb-form input {
+        padding: 12px;
+      }
+
+      .hb-footer__top {
+        padding: 24px;
+      }
+
+      .hb-footer__bottom {
+        padding: 14px 22px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hb-page">
+
+    <!-- Header -->
+    <header class="hb-header">
+      <div class="hb-header__inner">
+        <a href="index.html" class="hb-logo" aria-label="دليل البيت المرتب">
+          <span class="hb-logo__mark">🌿</span>
+          <span class="hb-logo__text">
+            <strong>دليل البيت المرتب</strong>
+            <span>أفكار بسيطة لحياة أجمل</span>
+          </span>
+        </a>
+
+        <nav class="hb-nav" id="hbNav">
+          <a class="active" href="index.html">الرئيسية</a>
+          <a href="articles/living-room-organization.html">ترتيب البيت</a>
+          <a href="articles/daily-home-cleaning.html">تنظيف يومي</a>
+          <a href="articles/kitchen-organization-week.html">المطبخ</a>
+          <a href="#bathroom">الحمام</a>
+          <a href="articles/carpet-care-at-home.html">المفروشات</a>
+          <a href="articles/calm-organized-home.html">أفكار منزلية</a>
+        </nav>
+
+        <button class="hb-search" aria-label="بحث">🔍</button>
+        <button class="hb-menu-btn" id="hbMenuBtn" aria-label="القائمة">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hb-container hb-hero">
+      <div class="hb-hero__grid">
+
+        <div class="hb-hero__image">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGtLlH4EBgvNXUfY5V1xexogM7WIAfSMa3MgaIr0h3_kRkAChk0NO2O35yt7ntbuLTchn_evQF7329Yxovb7ShaPAn75Q4xxbJAqyun592l5q3rlV6a-KwhfqhCKIbWCDlhNigBHgi0WeIgFSyHjUSjG3ZFc212aZs5G3Kq4sJDH-P_hzNKdvhN4NtcsWU/s5472/01-hero-living-room.jpg" alt="غرفة معيشة مرتبة بإضاءة طبيعية">
+          <div class="hb-hero__badge">
+            <span>🏡</span>
+            <div>
+              <strong>أفكار منزلية يومية</strong>
+              <small>بسيطة، مرتبة، وسهلة التطبيق</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hb-hero__content">
+          <div class="hb-kicker">🌿 مدونة منزلية عربية</div>
+          <h1 class="hb-title">
+            أفكار بسيطة<br>
+            <span>لبيت أهدأ وأرتب</span>
+          </h1>
+          <p class="hb-lead">
+            نصائح عملية عن ترتيب البيت، العناية بالمطبخ، تنظيف المفروشات،
+            وتنظيم التفاصيل اليومية بأسلوب سهل وواضح.
+          </p>
+          <div class="hb-actions">
+            <a class="hb-btn hb-btn--primary" href="#articles">ابدأ التصفح ←</a>
+            <a class="hb-btn hb-btn--ghost" href="#latest-more">أحدث المقالات 📄</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="hb-container hb-section">
+      <div class="hb-section__head">
+        <h2 class="hb-section__title">
+          تصفح حسب الفئة
+          <small>اختاري الموضوع الأقرب لاحتياج بيتك اليوم</small>
+        </h2>
+      </div>
+
+      <div class="hb-cats">
+        <a href="articles/living-room-organization.html" class="hb-cat">
+          <span class="hb-cat__icon">🛋️</span>
+          <strong>ترتيب البيت</strong>
+        </a>
+        <a href="articles/daily-home-cleaning.html" class="hb-cat">
+          <span class="hb-cat__icon">🧽</span>
+          <strong>تنظيف يومي</strong>
+        </a>
+        <a href="articles/kitchen-organization-week.html" class="hb-cat">
+          <span class="hb-cat__icon">🍳</span>
+          <strong>المطبخ</strong>
+        </a>
+        <a href="#bathroom" class="hb-cat">
+          <span class="hb-cat__icon">🛁</span>
+          <strong>الحمام</strong>
+        </a>
+        <a href="articles/carpet-care-at-home.html" class="hb-cat">
+          <span class="hb-cat__icon">🧺</span>
+          <strong>السجاد والمفروشات</strong>
+        </a>
+        <a href="articles/calm-organized-home.html" class="hb-cat">
+          <span class="hb-cat__icon">👨‍👩‍👧</span>
+          <strong>أفكار منزلية</strong>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="hb-container hb-section" id="articles">
+      <div class="hb-section__head">
+        <h2 class="hb-section__title">
+          مقالات مميزة
+          <small>مختارات تساعدك على جعل البيت أهدأ وأسهل في الاستخدام</small>
+        </h2>
+        <a href="#latest-more" class="hb-view-all">عرض أحدث المقالات ←</a>
+      </div>
+
+      <div class="hb-articles">
+
+        <a class="hb-card" href="articles/living-room-organization.html">
+          <div class="hb-card__image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMJ960P2KvJ6VyV7PIxOKFMB5_HEQFtP2pe8NemFlIVZODaN5Mcz3UUwsNUY9oW7wngN2xCM55mGUlOwaedtGtzt1vhYE6_nlm0gquoCmarO-oyQNDemrpjgS5DRll1zZB_2vpK65lRqr8nezsddIGDPEDHnywYO_KDFjds8dHWS5CTa_YefQv2qkee91I/s7340/02-living-room-article.jpg" alt="ترتيب غرفة المعيشة">
+            <span class="hb-card__num">1</span>
+          </div>
+          <div class="hb-card__body">
+            <h3>7 خطوات لترتيب غرفة المعيشة بسهولة</h3>
+            <p>دليل عملي لترتيب غرفة المعيشة بخطوات بسيطة تمنحك مساحة مريحة ومرتبة كل يوم.</p>
+            <div class="hb-meta">
+              <span>ترتيب البيت</span><span class="hb-dot"></span>
+              <span>10 مايو 2026</span><span class="hb-dot"></span>
+              <span>6 دقائق قراءة</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="hb-card" href="articles/kitchen-organization-week.html">
+          <div class="hb-card__image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzi8rlDmjWdokJTM8EeqdwQg97TiFowrzBsM1byVmL04VvKuZOehsSBKUj8I6J5sJNqcbe3o7RaEHR0kATP6kX4tR2aUjipQ4P1sPMO5OdALV97kRKnwD5lTrz1Pw8KRwSbSENdNZdqnIVtXwWXeoUloNzkuPFbLdSQq-mpLZVUFw0-z8TmfZcFkVah6PE/s5000/03-kitchen-article.jpg" alt="مطبخ مرتب ونظيف">
+            <span class="hb-card__num">2</span>
+          </div>
+          <div class="hb-card__body">
+            <h3>كيف تحافظين على المطبخ مرتبًا طوال الأسبوع؟</h3>
+            <p>عادات صغيرة توفر الوقت والجهد وتحافظ على مطبخك نظيفًا ومنظمًا طوال الوقت.</p>
+            <div class="hb-meta">
+              <span>المطبخ</span><span class="hb-dot"></span>
+              <span>12 مايو 2026</span><span class="hb-dot"></span>
+              <span>7 دقائق قراءة</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="hb-card" href="articles/carpet-care-at-home.html">
+          <div class="hb-card__image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc2MXK_vuJbTwEXFg1mWb5zRVHjlEcMlXNRb9AYzh_jtHR4N9cSkXwn0ANNkZSOLoZ6_e_4xrNyRexHFbDVVyqMDoKVtDIccwD5dsiUwNRvjLK5nIDrXaL8QqtY1Yr9G5FEubzXBs4gmjnVdta3HiwlW3rnbCEC3EvkB2LBZIxK_QNsS0eutfPuR2nFJ1z/s4800/04-carpet-furniture-article.jpg" alt="العناية بالسجاد والمفروشات">
+            <span class="hb-card__num">3</span>
+          </div>
+          <div class="hb-card__body">
+            <h3>أفضل طريقة للعناية بالسجاد داخل المنزل</h3>
+            <p>نصائح فعالة لتنظيف السجاد وإزالة البقع والحفاظ على مظهره لأطول فترة ممكنة.</p>
+            <div class="hb-meta">
+              <span>السجاد والمفروشات</span><span class="hb-dot"></span>
+              <span>15 مايو 2026</span><span class="hb-dot"></span>
+              <span>5 دقائق قراءة</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Latest More Articles -->
+    <section class="hb-container hb-section" id="latest-more">
+      <div class="hb-section__head">
+        <h2 class="hb-section__title">
+          أحدث المقالات
+          <small>مقالات إضافية لتثبيت شكل المدونة وتوزيع الأقسام بشكل طبيعي</small>
+        </h2>
+      </div>
+
+      <div class="hb-articles hb-articles--two">
+
+        <a class="hb-card" href="articles/daily-home-cleaning.html">
+          <div class="hb-card__image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGtLlH4EBgvNXUfY5V1xexogM7WIAfSMa3MgaIr0h3_kRkAChk0NO2O35yt7ntbuLTchn_evQF7329Yxovb7ShaPAn75Q4xxbJAqyun592l5q3rlV6a-KwhfqhCKIbWCDlhNigBHgi0WeIgFSyHjUSjG3ZFc212aZs5G3Kq4sJDH-P_hzNKdvhN4NtcsWU/s5472/01-hero-living-room.jpg" alt="نظافة البيت يوميًا">
+            <span class="hb-card__num">4</span>
+          </div>
+          <div class="hb-card__body">
+            <h3>خطوات بسيطة للحفاظ على نظافة البيت يوميًا</h3>
+            <p>روتين خفيف يساعدك على منع تراكم الفوضى والحفاظ على البيت مرتبًا بدون مجهود كبير.</p>
+            <div class="hb-meta">
+              <span>تنظيف يومي</span><span class="hb-dot"></span>
+              <span>18 مايو 2026</span><span class="hb-dot"></span>
+              <span>6 دقائق قراءة</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="hb-card" href="articles/calm-organized-home.html">
+          <div class="hb-card__image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEic5ozaRMM7iG7ctWFLJTTcZNwfoTH6DkqVTOyf4JJFkKz8B7XvNYUXzvALkPKwQU3JjeTVmBsbOuKTFFbEEr-ccfpHmb7orm2F693qMcViMqnFlrpWtiYMtKpzRayaot7YHj4ZUxAfZSbGKKbMfDh05TsXbXouaHaYVN-dBD9YSClXXDDvCm5jyewIi9uL/s6007/05-newsletter-decor.jpg" alt="بيت أكثر هدوءًا وتنظيمًا">
+            <span class="hb-card__num">5</span>
+          </div>
+          <div class="hb-card__body">
+            <h3>كيف تجعلين البيت أكثر هدوءًا وتنظيمًا؟</h3>
+            <p>أفكار بسيطة لتقليل الفوضى، ترتيب المساحات، وتحويل البيت إلى مكان أكثر راحة.</p>
+            <div class="hb-meta">
+              <span>أفكار منزلية</span><span class="hb-dot"></span>
+              <span>20 مايو 2026</span><span class="hb-dot"></span>
+              <span>6 دقائق قراءة</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Quick Ideas -->
+    <section class="hb-container hb-section">
+      <div class="hb-section__head">
+        <h2 class="hb-section__title">
+          أفكار سريعة
+          <small>تفاصيل صغيرة تصنع فرقًا واضحًا في البيت</small>
+        </h2>
+      </div>
+
+      <div class="hb-ideas">
+        <div class="hb-idea">
+          <div class="hb-idea__top">
+            <span class="hb-idea__icon">🍋</span>
+            <span class="hb-check">✓</span>
+          </div>
+          <p>استخدمي الليمون وصودا الخبز لتقليل الروائح داخل الحوض.</p>
+        </div>
+
+        <div class="hb-idea">
+          <div class="hb-idea__top">
+            <span class="hb-idea__icon">🧺</span>
+            <span class="hb-check">✓</span>
+          </div>
+          <p>منظم صغير في كل درج يوفر عليكِ فوضى التفاصيل اليومية.</p>
+        </div>
+
+        <div class="hb-idea">
+          <div class="hb-idea__top">
+            <span class="hb-idea__icon">🧻</span>
+            <span class="hb-check">✓</span>
+          </div>
+          <p>غسل المناشف مرة أسبوعيًا يساعد على الحفاظ على نظافتها.</p>
+        </div>
+
+        <div class="hb-idea">
+          <div class="hb-idea__top">
+            <span class="hb-idea__icon">🪴</span>
+            <span class="hb-check">✓</span>
+          </div>
+          <p>النباتات الداخلية تمنح البيت حيوية وشعورًا أفضل بالراحة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="hb-container hb-section">
+      <div class="hb-newsletter">
+        <div class="hb-newsletter__image">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEic5ozaRMM7iG7ctWFLJTTcZNwfoTH6DkqVTOyf4JJFkKz8B7XvNYUXzvALkPKwQU3JjeTVmBsbOuKTFFbEEr-ccfpHmb7orm2F693qMcViMqnFlrpWtiYMtKpzRayaot7YHj4ZUxAfZSbGKKbMfDh05TsXbXouaHaYVN-dBD9YSClXXDDvCm5jyewIi9uL/s6007/05-newsletter-decor.jpg" alt="ديكور منزلي هادئ">
+        </div>
+
+        <div>
+          <h2>اشتركي ليصلك جديد الأفكار المنزلية</h2>
+          <p>نصائح مرتبة، أفكار بسيطة، وإلهام يومي لبيت أجمل وأسهل.</p>
+
+          <form class="hb-form">
+            <input type="email" placeholder="ادخلي بريدك الإلكتروني" aria-label="البريد الإلكتروني">
+            <button type="submit">اشترك الآن</button>
+          </form>
+        </div>
+
+        <div class="hb-envelope">✉️</div>
+      </div>
+
+      <div class="hb-features">
+        <div class="hb-feature">
+          <span class="hb-feature__icon">🤍</span>
+          <div>
+            <strong>محتوى موثوق</strong>
+            <span>نصائح عملية مناسبة للحياة اليومية داخل البيت.</span>
+          </div>
+        </div>
+
+        <div class="hb-feature">
+          <span class="hb-feature__icon">🌱</span>
+          <div>
+            <strong>أسلوب بسيط وواضح</strong>
+            <span>خطوات سهلة يمكن تطبيقها بدون تعقيد.</span>
+          </div>
+        </div>
+
+        <div class="hb-feature">
+          <span class="hb-feature__icon">📌</span>
+          <div>
+            <strong>مواضيع متنوعة</strong>
+            <span>كل ما يخص البيت والعائلة في مكان واحد.</span>
+          </div>
+        </div>
+
+        <div class="hb-feature">
+          <span class="hb-feature__icon">✨</span>
+          <div>
+            <strong>أفكار ملهمة</strong>
+            <span>تفاصيل صغيرة تجعل البيت أكثر راحة وتنظيمًا.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="hb-container hb-footer">
+      <div class="hb-footer__top">
+
+        <div>
+          <h3>عن المدونة</h3>
+          <p>
+            دليل البيت المرتب مدونة عربية تقدم أفكارًا بسيطة ونصائح عملية
+            لتنظيم البيت وتحسين جودة الحياة اليومية للأسرة.
+          </p>
+        </div>
+
+        <div>
+          <h3>أقسام سريعة</h3>
+          <ul>
+            <li><a href="articles/living-room-organization.html">ترتيب البيت</a></li>
+            <li><a href="articles/daily-home-cleaning.html">تنظيف يومي</a></li>
+            <li><a href="articles/kitchen-organization-week.html">المطبخ</a></li>
+            <li><a href="articles/carpet-care-at-home.html">المفروشات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>روابط مهمة</h3>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#latest-more">أحدث المقالات</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>أفكار من المدونة</h3>
+          <ul>
+            <li><a href="articles/calm-organized-home.html">بيت أكثر هدوءًا وتنظيمًا</a></li>
+            <li><a href="articles/carpet-care-at-home.html">العناية بالسجاد داخل المنزل</a></li>
+            <li><a href="articles/kitchen-organization-week.html">تنظيم المطبخ طوال الأسبوع</a></li>
+            <li><a href="articles/daily-home-cleaning.html">روتين نظافة يومي بسيط</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="hb-footer__bottom">
+        <span>© 2026 دليل البيت المرتب. جميع الحقوق محفوظة.</span>
+
+        <span><strong>تصميم Mohamedali</strong></span>
+
+        <a class="hb-footer-whatsapp"
+           href="https://wa.me/79960827854"
+           target="_blank"
+           rel="noopener"
+           aria-label="تواصل عبر واتساب">
+          <strong>واتساب:</strong>
+          <bdi>+7 996 082-78-54</bdi>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const hbMenuBtn = document.getElementById("hbMenuBtn");
+    const hbNav = document.getElementById("hbNav");
+
+    hbMenuBtn.addEventListener("click", function () {
+      hbNav.classList.toggle("is-open");
+    });
+  </script>
+
+</body>
+</html>

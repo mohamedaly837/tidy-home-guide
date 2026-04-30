@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>خطوات بسيطة للحفاظ على نظافة البيت يوميًا | دليل البيت المرتب</title>
+  <meta name="description" content="تعرفي على خطوات بسيطة للحفاظ على نظافة البيت يوميًا بدون مجهود كبير، من ترتيب السرير وتنظيف المطبخ إلى تنظيم الأشياء الصغيرة قبل تراكم الفوضى." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f2ea;
+      --card: #ffffff;
+      --green: #52735f;
+      --green-dark: #2f5140;
+      --green-soft: #e7efe8;
+      --text: #253126;
+      --muted: #6f796e;
+      --line: rgba(47, 81, 64, .14);
+      --shadow: 0 22px 60px rgba(47, 81, 64, .11);
+      --shadow-soft: 0 12px 34px rgba(47, 81, 64, .08);
+      --container: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(214, 229, 207, .55), transparent 34%),
+        radial-gradient(circle at top left, rgba(240, 222, 188, .55), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .hb-page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 22px;
+    }
+
+    .hb-container {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+    }
+
+    .hb-header {
+      position: sticky;
+      top: 14px;
+      z-index: 50;
+      margin-bottom: 24px;
+    }
+
+    .hb-header__inner {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+      background: rgba(255, 250, 241, .86);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.82);
+      box-shadow: 0 12px 35px rgba(47, 81, 64, .08);
+      border-radius: 999px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .hb-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+    }
+
+    .hb-logo__mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dfeadf, #fff8e8);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(47,81,64,.08);
+      font-size: 20px;
+    }
+
+    .hb-logo__text strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .hb-logo__text span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .hb-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .hb-nav a {
+      padding: 9px 12px;
+      color: #556255;
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 999px;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .hb-nav a:hover,
+    .hb-nav a.active {
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .hb-menu-btn {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      display: none;
+      place-items: center;
+      background: #fff;
+      color: var(--green-dark);
+      box-shadow: 0 8px 20px rgba(47, 81, 64, .08);
+      cursor: pointer;
+      font-size: 18px;
+      flex: 0 0 42px;
+    }
+
+    .article-hero {
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 34px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .article-hero__image {
+      height: 460px;
+      border-radius: 28px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      background: #e7e2d9;
+    }
+
+    .article-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .article-hero__content {
+      padding: 8px 18px 24px;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .article-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--green-dark);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 24px rgba(47,81,64,.06);
+    }
+
+    h1 {
+      color: var(--green-dark);
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.3;
+      font-weight: 900;
+      letter-spacing: -.9px;
+      margin-bottom: 14px;
+    }
+
+    .article-desc {
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+      max-width: 760px;
+      margin: 0 auto 18px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      flex-wrap: wrap;
+      color: #7a8678;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(82,115,95,.55);
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 28px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    .article-content {
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 30px;
+      padding: clamp(24px, 4vw, 46px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .article-content p {
+      color: #445044;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .article-content h2 {
+      color: var(--green-dark);
+      font-size: clamp(23px, 3vw, 30px);
+      line-height: 1.5;
+      font-weight: 900;
+      margin: 34px 0 12px;
+      padding-top: 4px;
+    }
+
+    .article-content a {
+      color: var(--green-dark);
+      font-weight: 900;
+      border-bottom: 2px solid rgba(82,115,95,.22);
+    }
+
+    .article-content a:hover {
+      border-bottom-color: var(--green-dark);
+    }
+
+    .article-side {
+      position: sticky;
+      top: 110px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .side-card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .side-card h3 {
+      color: var(--green-dark);
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .side-card ul {
+      list-style: none;
+    }
+
+    .side-card li {
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .side-card a:hover {
+      color: var(--green-dark);
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-dark);
+      color: #fff;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 15px 32px rgba(47,81,64,.22);
+    }
+
+    .hb-footer {
+      margin-top: 54px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(231,239,232,.65), transparent 32%),
+        rgba(255,255,255,.62);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 34px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .hb-footer__top {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.3fr .8fr .8fr 1fr;
+      gap: 28px;
+    }
+
+    .hb-footer h3 {
+      color: var(--green-dark);
+      font-size: 17px;
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+
+    .hb-footer p {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+      max-width: 330px;
+    }
+
+    .hb-footer ul {
+      list-style: none;
+    }
+
+    .hb-footer li {
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hb-footer li a:hover {
+      color: var(--green-dark);
+      padding-right: 4px;
+    }
+
+    .hb-footer__bottom {
+      border-top: 1px solid var(--line);
+      padding: 15px 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(255,250,241,.55);
+    }
+
+    .hb-footer__bottom strong {
+      color: var(--green-dark);
+      font-weight: 900;
+    }
+
+    .hb-footer-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--green-dark);
+      font-weight: 900;
+      transition: .2s ease;
+      direction: rtl;
+      unicode-bidi: isolate;
+    }
+
+    .hb-footer-whatsapp:hover {
+      color: #1f3d2f;
+      transform: translateY(-1px);
+    }
+
+    .hb-footer-whatsapp bdi {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-weight: 900;
+    }
+
+    @media (max-width: 950px) {
+      .hb-nav {
+        position: absolute;
+        top: 74px;
+        right: 0;
+        left: 0;
+        width: min(var(--container), calc(100vw - 44px));
+        margin: 0 auto;
+        background: rgba(255,250,241,.96);
+        border: 1px solid rgba(255,255,255,.9);
+        box-shadow: var(--shadow-soft);
+        border-radius: 24px;
+        padding: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hb-nav.is-open {
+        display: flex;
+      }
+
+      .hb-menu-btn {
+        display: grid;
+      }
+
+      .article-layout,
+      .hb-footer__top {
+        grid-template-columns: 1fr;
+      }
+
+      .article-side {
+        position: static;
+      }
+
+      .article-hero__image {
+        height: 360px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hb-page {
+        padding: 12px;
+      }
+
+      .hb-header {
+        top: 8px;
+      }
+
+      .hb-header__inner {
+        border-radius: 22px;
+      }
+
+      .hb-logo__text strong {
+        font-size: 16px;
+      }
+
+      .hb-logo__text span {
+        display: none;
+      }
+
+      .article-hero {
+        padding: 10px;
+        border-radius: 26px;
+      }
+
+      .article-hero__image {
+        height: 260px;
+        border-radius: 22px;
+      }
+
+      .article-hero__content {
+        padding: 8px 10px 18px;
+      }
+
+      .article-content {
+        border-radius: 24px;
+        padding: 24px 18px;
+      }
+
+      .article-content p {
+        font-size: 16px;
+      }
+
+      .hb-footer__top {
+        padding: 24px;
+      }
+
+      .hb-footer__bottom {
+        padding: 14px 22px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hb-page">
+
+    <header class="hb-header">
+      <div class="hb-header__inner">
+        <a href="../index.html" class="hb-logo" aria-label="دليل البيت المرتب">
+          <span class="hb-logo__mark">🌿</span>
+          <span class="hb-logo__text">
+            <strong>دليل البيت المرتب</strong>
+            <span>أفكار بسيطة لحياة أجمل</span>
+          </span>
+        </a>
+
+        <nav class="hb-nav" id="hbNav">
+          <a href="../index.html">الرئيسية</a>
+          <a href="living-room-organization.html">ترتيب البيت</a>
+          <a class="active" href="#">تنظيف يومي</a>
+          <a href="kitchen-organization-week.html">المطبخ</a>
+          <a href="carpet-care-at-home.html">المفروشات</a>
+          <a href="calm-organized-home.html">أفكار منزلية</a>
+        </nav>
+
+        <button class="hb-menu-btn" id="hbMenuBtn" aria-label="القائمة">☰</button>
+      </div>
+    </header>
+
+    <section class="hb-container article-hero">
+      <div class="article-hero__image">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGtLlH4EBgvNXUfY5V1xexogM7WIAfSMa3MgaIr0h3_kRkAChk0NO2O35yt7ntbuLTchn_evQF7329Yxovb7ShaPAn75Q4xxbJAqyun592l5q3rlV6a-KwhfqhCKIbWCDlhNigBHgi0WeIgFSyHjUSjG3ZFc212aZs5G3Kq4sJDH-P_hzNKdvhN4NtcsWU/s5472/01-hero-living-room.jpg" alt="بيت نظيف ومرتب بإضاءة طبيعية">
+      </div>
+
+      <div class="article-hero__content">
+        <span class="article-kicker">🧽 تنظيف يومي</span>
+        <h1>خطوات بسيطة للحفاظ على نظافة البيت يوميًا</h1>
+        <p class="article-desc">
+          روتين خفيف يساعدك على منع تراكم الفوضى، والحفاظ على شكل البيت مرتبًا ومريحًا بدون مجهود كبير كل يوم.
+        </p>
+
+        <div class="article-meta">
+          <span>دليل البيت المرتب</span>
+          <span class="dot"></span>
+          <span>18 مايو 2026</span>
+          <span class="dot"></span>
+          <span>حوالي 6 دقائق قراءة</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hb-container article-layout">
+
+      <article class="article-content">
+
+        <p>
+          نظافة البيت اليومية لا تعني قضاء ساعات طويلة في التنظيف، ولا تعني أن يكون كل ركن مثاليًا طوال الوقت. الفكرة ببساطة هي منع الفوضى من التراكم، والتعامل مع الأشياء الصغيرة في وقتها قبل أن تتحول إلى مهمة كبيرة ومرهقة. كثير من البيوت لا تحتاج إلى تنظيف عميق كل يوم، لكنها تحتاج إلى روتين خفيف يحافظ على الشكل العام ويجعل الحركة داخل المنزل أسهل وأكثر راحة.
+        </p>
+
+        <p>
+          عندما يكون البيت نظيفًا ومرتبًا بدرجة مقبولة، ينعكس ذلك على الحالة النفسية لكل أفراد الأسرة. الدخول إلى غرفة مرتبة، أو مطبخ نظيف، أو حمام خالٍ من الفوضى يعطي شعورًا بالهدوء حتى لو كان اليوم مزدحمًا. لذلك، الحفاظ على نظافة البيت يوميًا ليس رفاهية، بل عادة بسيطة تجعل الحياة داخل المنزل أهدأ وأسهل.
+        </p>
+
+        <h2>1. ابدئي بترتيب السرير كل صباح</h2>
+
+        <p>
+          ترتيب السرير من أسرع العادات التي تعطي إحساسًا فوريًا بالنظام. لا يستغرق الأمر أكثر من دقيقتين، لكنه يغير شكل غرفة النوم بالكامل. عندما يكون السرير مرتبًا، تبدو الغرفة أنظف حتى لو كانت هناك بعض التفاصيل الصغيرة التي تحتاج إلى ترتيب.
+        </p>
+
+        <p>
+          اجعلي هذه الخطوة أول عادة في اليوم. رتبي الغطاء، أعيدي الوسائد إلى مكانها، وافتحي النافذة قليلًا لدخول الهواء. هذه البداية البسيطة تساعدك على الدخول في مزاج أفضل لباقي مهام البيت.
+        </p>
+
+        <h2>2. اجمعي الأشياء المتفرقة في جولة سريعة</h2>
+
+        <p>
+          كل بيت يتعرض يوميًا لتراكم أشياء صغيرة في غير مكانها: كوب على الطاولة، لعبة على الأرض، شاحن بجانب الكنبة، ورقة على المطبخ، أو ملابس على كرسي. بدل ترك هذه التفاصيل تتراكم، خصصي خمس دقائق فقط لجولة سريعة تجمعين فيها الأشياء المتفرقة.
+        </p>
+
+        <p>
+          يمكنك استخدام سلة صغيرة أثناء الجولة، ثم توزيع الأغراض على أماكنها. هذه الطريقة أسرع من الذهاب والعودة لكل غرض، وتمنع الفوضى من السيطرة على الغرف. وللحفاظ على غرفة المعيشة تحديدًا، يمكنك الرجوع إلى مقال <a href="living-room-organization.html">7 خطوات لترتيب غرفة المعيشة بسهولة</a>.
+        </p>
+
+        <h2>3. حافظي على نظافة المطبخ بعد كل استخدام</h2>
+
+        <p>
+          المطبخ أكثر مكان يظهر عليه الاستخدام اليومي. لذلك، لا تنتظري نهاية اليوم حتى تنظفي كل شيء دفعة واحدة. بعد تحضير الطعام، امسحي الرخام بسرعة، اغسلي الأدوات الأساسية، وأعيدي التوابل والزيوت إلى أماكنها. هذه الخطوات الصغيرة تجعل المطبخ جاهزًا للاستخدام مرة أخرى.
+        </p>
+
+        <p>
+          إذا تراكمت الأطباق في الحوض، سيبدو المطبخ مزدحمًا حتى لو كان باقي البيت مرتبًا. الأفضل غسل الأطباق أولًا بأول أو ترتيبها داخل الحوض لحين غسلها. ويمكنك قراءة مقال <a href="kitchen-organization-week.html">كيف تحافظين على المطبخ مرتبًا طوال الأسبوع؟</a> للحصول على روتين أوسع للمطبخ.
+        </p>
+
+        <h2>4. خصصي وقتًا قصيرًا للحمام</h2>
+
+        <p>
+          الحمام لا يحتاج إلى تنظيف عميق كل يوم، لكنه يحتاج إلى متابعة خفيفة. امسحي الحوض بعد الاستخدام، رتبي المناشف، تخلصي من العبوات الفارغة، وتأكدي من وجود مناديل وصابون بشكل دائم. هذه التفاصيل تمنع تراكم الاتساخ وتبقي الحمام مقبولًا طوال اليوم.
+        </p>
+
+        <p>
+          يمكن أيضًا تخصيص بخاخ تنظيف خفيف وفوطة صغيرة داخل الحمام أو بالقرب منه، حتى يصبح التنظيف السريع أسهل. كلما كانت أدوات التنظيف قريبة، زادت فرصة استخدامها في الوقت المناسب بدل تأجيل المهمة.
+        </p>
+
+        <h2>5. امسحي الأسطح الظاهرة</h2>
+
+        <p>
+          الأسطح الظاهرة مثل طاولة غرفة المعيشة، طاولة الطعام، رخامة المطبخ، والكومود بجانب السرير تؤثر جدًا على شكل البيت. إذا كانت هذه الأسطح مليئة بالأشياء، سيبدو البيت غير مرتب حتى لو كانت الأرضيات نظيفة.
+        </p>
+
+        <p>
+          اختاري سطحين أو ثلاثة فقط كل يوم وامسحيهم بسرعة. لا تحتاجين إلى تنظيف كل شيء مرة واحدة. المهم أن تبقى الأماكن التي تقع عليها العين أولًا مرتبة وخالية من التراكم.
+        </p>
+
+        <h2>6. اهتمي بالأرضيات حسب الحاجة</h2>
+
+        <p>
+          ليس ضروريًا مسح الأرضيات بالكامل يوميًا، لكن من المفيد إزالة الفتات والغبار من الأماكن كثيرة الاستخدام. استخدمي مكنسة خفيفة أو ممسحة سريعة في المطبخ، المدخل، وغرفة المعيشة. هذه الأماكن عادة تنقل الاتساخ إلى باقي البيت.
+        </p>
+
+        <p>
+          إذا كان لديك سجاد، فمرري المكنسة الكهربائية عليه حسب الحاجة، خاصة في المساحات التي يجلس فيها أفراد الأسرة كثيرًا. ويمكنك قراءة مقال <a href="carpet-care-at-home.html">أفضل طريقة للعناية بالسجاد داخل المنزل</a> لمعرفة طرق الحفاظ عليه بدون مجهود زائد.
+        </p>
+
+        <h2>7. لا تتركي القمامة لآخر لحظة</h2>
+
+        <p>
+          امتلاء سلة القمامة أو ترك بقايا الطعام لفترة طويلة يسبب روائح غير مرغوبة ويؤثر على نظافة البيت. راقبي سلة المطبخ والحمام يوميًا، وأخرجي القمامة قبل أن تمتلئ تمامًا، خصوصًا في الأيام الحارة أو بعد الطبخ.
+        </p>
+
+        <p>
+          من الأفضل أيضًا تنظيف مكان السلة من وقت لآخر، لأن الروائح قد تبقى حتى بعد إخراج الكيس. خطوة بسيطة مثل مسح الغطاء أو رش معطر خفيف تجعل المكان أنظف.
+        </p>
+
+        <h2>8. خصصي عشر دقائق قبل النوم</h2>
+
+        <p>
+          قبل النوم، خذي عشر دقائق فقط لإعادة البيت إلى وضع هادئ. رتبي الوسائد، اجمعي الأكواب، أطفئي الأجهزة غير المستخدمة، رتبي المطبخ بسرعة، وتأكدي أن الأشياء الأساسية في أماكنها. هذه الدقائق تجعل صباح اليوم التالي أسهل بكثير.
+        </p>
+
+        <p>
+          لا تنظري لهذه الخطوة كتنظيف كامل، بل كإعادة ضبط بسيطة للبيت. عندما تستيقظين وتجدين المكان مرتبًا، يبدأ اليوم بشعور أفضل وبدون ضغط من فوضى الأمس.
+        </p>
+
+        <h2>خلاصة</h2>
+
+        <p>
+          الحفاظ على نظافة البيت يوميًا لا يحتاج إلى جدول معقد أو مجهود كبير. كل ما تحتاجينه هو مجموعة عادات صغيرة: ترتيب السرير، جمع الأشياء المتفرقة، مسح الأسطح، متابعة المطبخ والحمام، وإخراج القمامة في وقتها. هذه التفاصيل إذا تكررت يوميًا تجعل البيت أنظف وأسهل في الإدارة.
+        </p>
+
+        <p>
+          ابدئي بخطوتين فقط اليوم، ولا تحاولي تغيير كل شيء مرة واحدة. مع الوقت ستتحول هذه الخطوات إلى عادة طبيعية، وسيصبح البيت أكثر هدوءًا ونظامًا بدون شعور مستمر بالإرهاق.
+        </p>
+
+      </article>
+
+      <aside class="article-side">
+        <div class="side-card">
+          <h3>مقالات مرتبطة</h3>
+          <ul>
+            <li><a href="living-room-organization.html">7 خطوات لترتيب غرفة المعيشة بسهولة</a></li>
+            <li><a href="kitchen-organization-week.html">كيف تحافظين على المطبخ مرتبًا طوال الأسبوع؟</a></li>
+            <li><a href="carpet-care-at-home.html">أفضل طريقة للعناية بالسجاد داخل المنزل</a></li>
+            <li><a href="calm-organized-home.html">كيف تجعلين البيت أكثر هدوءًا وتنظيمًا؟</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>العودة للرئيسية</h3>
+          <p>يمكنك الرجوع إلى الصفحة الرئيسية لتصفح باقي الأقسام والمقالات.</p>
+          <br>
+          <a class="back-home" href="../index.html">الصفحة الرئيسية ←</a>
+        </div>
+      </aside>
+
+    </section>
+
+    <footer class="hb-container hb-footer">
+      <div class="hb-footer__top">
+
+        <div>
+          <h3>عن المدونة</h3>
+          <p>
+            دليل البيت المرتب مدونة عربية تقدم أفكارًا بسيطة ونصائح عملية
+            لتنظيم البيت وتحسين جودة الحياة اليومية للأسرة.
+          </p>
+        </div>
+
+        <div>
+          <h3>أقسام سريعة</h3>
+          <ul>
+            <li><a href="living-room-organization.html">ترتيب البيت</a></li>
+            <li><a href="daily-home-cleaning.html">تنظيف يومي</a></li>
+            <li><a href="kitchen-organization-week.html">المطبخ</a></li>
+            <li><a href="carpet-care-at-home.html">المفروشات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>روابط مهمة</h3>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="living-room-organization.html">أحدث المقالات</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>أفكار من المدونة</h3>
+          <ul>
+            <li><a href="calm-organized-home.html">بيت أكثر هدوءًا وتنظيمًا</a></li>
+            <li><a href="carpet-care-at-home.html">العناية بالسجاد داخل المنزل</a></li>
+            <li><a href="kitchen-organization-week.html">تنظيم المطبخ طوال الأسبوع</a></li>
+            <li><a href="daily-home-cleaning.html">روتين نظافة يومي بسيط</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="hb-footer__bottom">
+        <span>© 2026 دليل البيت المرتب. جميع الحقوق محفوظة.</span>
+        <span><strong>تصميم Mohamedali</strong></span>
+        <a class="hb-footer-whatsapp"
+           href="https://wa.me/79960827854"
+           target="_blank"
+           rel="noopener"
+           aria-label="تواصل عبر واتساب">
+          <strong>واتساب:</strong>
+          <bdi>+7 996 082-78-54</bdi>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const hbMenuBtn = document.getElementById("hbMenuBtn");
+    const hbNav = document.getElementById("hbNav");
+
+    hbMenuBtn.addEventListener("click", function () {
+      hbNav.classList.toggle("is-open");
+    });
+  </script>
+
+</body>
+</html>
